@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+html,
+body {
+  background-color: silver;
+  padding: 0;
+  margin: 0;
+  font-family: "Permanent Marker", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+section {
+  display: flex;
+  min-height: 100vh;
+  // width: 50vw;
+  min-width: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testing {
+  display: inline-block;
+}
+
+h3 {
+  margin-left: 5px;
+}
+
+small {
+  position: absolute;
+  justify-self: flex-end;
+  margin-left: 8px;
+  font-size: 1.2em;
+  animation: pulse 500ms alternate infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 20%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+ul {
+  width: 50vw;
+  min-width: 300px;
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: disc;
+  display: grid;
+  grid-gap: .5rem;
+}
+
+li {
+  font-size: .75rem;
+  line-height: 1;
+}
+
+// How to style forms with CSS: A beginner’s guide by Supun Kavinda (3/23/20)
+// https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/
+
+input[type=text] {
+  padding:10px;
+  margin: 30px 20px 20px;
+  border: 0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+// CSS Button Styling Guide by Stephanie Eckles (5/6/20)
+// https://moderncss.dev/css-button-styling-guide/
+
+$btnColor: dimgray;
+
+* {
+  box-sizing: border-box;
+}
+
+a,
+button {
+  font-size: .9rem;
+}
+
+// Reset default link styles
+a {
+  text-decoration: none;
+}
+
+// Reset default button styles
+button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+  margin-left: 10px;
+
+  @media screen and (-ms-high-contrast: active) {
+    border: 2px solid currentcolor;
+  }
+}
+
+a,
+button,
+.file-input label {
+  // Display
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  // Visual
+  background-color: $btnColor;
+  color:whitesmoke;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+
+  // Size
+  padding: 0.25em 0.75em;
+  min-width: 10ch;
+  min-height: 44px;
+
+  // Text
+  text-align: center;
+  line-height: 1.1;
+
+  transition: 220ms all ease-in-out;
+
+  &:hover,
+  &:active {
+    background-color: scale-color($btnColor, $lightness: -20%);
+  }
+
+  &:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    box-shadow: 0 0 0 4px scale-color($btnColor, $lightness: -40%);
+  }
+
+  &--small {
+    font-size: 1.15rem;
+  }
+
+  &--block {
+    width: 100%;
+  }
+}
+
+// Styling file inputs like a boss by Abdulqudus Abubakre (8/31/2020)
+// https://dev.to/ibn_abubakre/styling-file-inputs-like-a-boss-mhm
+
+.file {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+
+.file-name {
+  position: absolute;
+  bottom: -35px;
+  left: 10px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview img {
+  opacity: 1;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border: 7px solid #222;
+  animation: fadeIn ease 3s;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+}
