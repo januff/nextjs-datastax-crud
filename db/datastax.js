@@ -4,10 +4,10 @@ import axios from 'axios'
 import createAuthRefreshInterceptor from 'axios-auth-refresh'
 import { useMutation, useQuery, queryCache } from 'react-query'
 
-// Get a free DataStax account here:
-// https://www.datastax.com/
+// get a free-tier DataStax account here:
+// https://astra.datastax.com/
 // Stargate documentation:
-// https://stargate.io/docs/stargate/0.1/developers-guide/document-using.html
+// https://www.datastax.com/dev/documents-api
 
 const STARGATE_NAMESPACE = 'stargate'
 const ASTRA_USER = 'einstein'
